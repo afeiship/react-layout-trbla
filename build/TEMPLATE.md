@@ -19,6 +19,18 @@ npm update @feizheng/react-layout-trbla
 ## properties
 __GENERATE_DOCS__
 
+## layouts
+| value | description              |
+| ----- | ------------------------ |
+| la    | left -> auto             |
+| lar   | left -> auto -> right    |
+| ar    | auto -> right            |
+| lr    | left -> right or justify |
+| ta    | top -> auto              |
+| tab   | top -> auto -> bottom    |
+| ab    | auto -> bottom           |
+| tb    | top -> bottom or justify |
+
 ## usage
 1. import css
   ```scss
