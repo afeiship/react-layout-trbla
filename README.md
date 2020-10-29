@@ -20,8 +20,8 @@ npm update @feizheng/react-layout-trbla
 | Name      | Type   | Required | Default | Description                           |
 | --------- | ------ | -------- | ------- | ------------------------------------- |
 | className | string | false    | -       | The extended className for component. |
-| value     | object | false    | null    | The changed value.                    |
-| onChange  | func   | false    | noop    | The change handler.                   |
+| nodeName  | any    | false    | 'div'   | The container tag name.               |
+| value     | enum   | false    | -       | The layout type.                      |
 
 
 ## usage
@@ -41,13 +41,40 @@ npm update @feizheng/react-layout-trbla
   import './assets/style.scss';
 
   class App extends React.Component {
+    state = {
+      layouts: ReactLayoutTrbla.layouts,
+      value: 'la'
+    };
+
+    get valueCount() {
+      return this.state.value.length;
+    }
+
     render() {
       return (
         <ReactDemokit
           className="p-3 app-container"
           url="https://github.com/afeiship/react-layout-trbla">
-          <ReactLayoutTrbla className="bg-gray-800 mb-5 text-white" />
-          <button className="button">Start~</button>
+          <div className="text-center ">
+            <label htmlFor="sel" className="mr-10 text-white">
+              Select a value:
+            </label>
+            <select
+              id="sel"
+              className="p-3"
+              onChange={(e) => {
+                this.setState({ value: e.target.value });
+              }}>
+              {this.state.layouts.map((item) => (
+                <option key={item}>{item}</option>
+              ))}
+            </select>
+          </div>
+          <ReactLayoutTrbla value={this.state.value} className="mb-3">
+            <div>start</div>
+            <div>auto</div>
+            {this.valueCount === 3 && <div>end</div>}
+          </ReactLayoutTrbla>
         </ReactDemokit>
       );
     }
