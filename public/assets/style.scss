@@ -1,0 +1,39 @@
+@import "@/components/style.scss";
+@import "~@feizheng/react-github-corner/dist/style.scss";
+@import "~@feizheng/react-sw-update-tips/dist/style.scss";
+@import "~@feizheng/react-demokit/dist/style.scss";
+
+.app-container {
+  .button {
+    background: #3cc51f;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 20px;
+    border: none;
+
+    &:active {
+      background: darken(#3cc51f, 10%);
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .react-layout-trbla {
+    div:nth-child(1) {
+      background: #eee;
+    }
+
+    div:nth-child(2) {
+      background: orange;
+    }
+
+    div:nth-child(2) {
+      background: green;
+    }
+  }
+}
