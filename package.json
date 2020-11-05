@@ -1,6 +1,6 @@
 {
   "name": "@feizheng/react-layout-trbla",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simply trbla layout for react.",
   "main": "dist/index.js",
   "scripts": {
@@ -18,7 +18,20 @@
   },
   "keywords": [
     "react",
-    "component"
+    "layout",
+    "trbla",
+    "tmb",
+    "lar",
+    "flex",
+    "auto",
+    "configuration",
+    "simple",
+    "center",
+    "align",
+    "justify",
+    "middle",
+    "vertical",
+    "horizontal"
   ],
   "author": "afei",
   "license": "MIT",
