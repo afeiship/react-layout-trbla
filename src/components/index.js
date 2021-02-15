@@ -44,7 +44,7 @@ export default class ReactLayoutTrbla extends Component {
     const props = {
       'data-component': CLASS_NAME,
       'data-value': value,
-      className: classNames(CLASS_NAME, className),
+      'className': classNames(CLASS_NAME, className),
       ...extraProps
     };
 

@@ -1,0 +1,14 @@
+.react-layout-trbla {
+  display: flex; }
+  .react-layout-trbla[data-value="la"], .react-layout-trbla[data-value="lar"], .react-layout-trbla[data-value="ar"], .react-layout-trbla[data-value="lr"] {
+    width: 100%;
+    flex-direction: row; }
+  .react-layout-trbla[data-value="ta"], .react-layout-trbla[data-value="tab"], .react-layout-trbla[data-value="ab"], .react-layout-trbla[data-value="tb"] {
+    height: 100%;
+    flex-direction: column; }
+  .react-layout-trbla[data-value="la"] > *:nth-child(2), .react-layout-trbla[data-value="lar"] > *:nth-child(2), .react-layout-trbla[data-value="ta"] > *:nth-child(2), .react-layout-trbla[data-value="tab"] > *:nth-child(2) {
+    flex: 1; }
+  .react-layout-trbla[data-value="ar"] > *:nth-child(1), .react-layout-trbla[data-value="ab"] > *:nth-child(1) {
+    flex: 1; }
+  .react-layout-trbla[data-value="lr"], .react-layout-trbla[data-value="tb"] {
+    justify-content: space-between; }

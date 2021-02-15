@@ -1,18 +1,18 @@
-import ReactDemokit from '@feizheng/react-demokit';
+import ReactDemokit from '@jswork/react-demokit';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactLayoutTrbla from '../src/main';
 import './assets/style.scss';
 
 const LAYOUT_MAPPING = {
-  'la': 'left -> auto',
-  'lar': 'left -> auto -> right',
-  'ar': 'auto -> right',
-  'lr': 'left -> right or justify',
-  'ta': 'top -> auto',
-  'tab': 'top -> auto -> bottom',
-  'ab': 'auto -> bottom',
-  'tb': 'top -> bottom or justify'
+  la: 'left -> auto',
+  lar: 'left -> auto -> right',
+  ar: 'auto -> right',
+  lr: 'left -> right or justify',
+  ta: 'top -> auto',
+  tab: 'top -> auto -> bottom',
+  ab: 'auto -> bottom',
+  tb: 'top -> bottom or justify'
 };
 
 class App extends React.Component {
@@ -46,9 +46,7 @@ class App extends React.Component {
             ))}
           </select>
         </div>
-        <h1
-          className="text-center text-white"
-          style={{ fontSize: 100 }}>
+        <h1 className="text-center text-white" style={{ fontSize: 60 }}>
           {LAYOUT_MAPPING[value]}
         </h1>
         <ReactLayoutTrbla value={value} className="mb-3">
