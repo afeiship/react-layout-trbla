@@ -15,8 +15,8 @@ npm install -S @jswork/react-layout-trbla
 | Name      | Type   | Required | Default | Description                           |
 | --------- | ------ | -------- | ------- | ------------------------------------- |
 | className | string | false    | -       | The extended className for component. |
-| value     | object | false    | null    | The changed value.                    |
-| onChange  | func   | false    | noop    | The change handler.                   |
+| nodeName  | any    | false    | 'div'   | The container tag name.               |
+| value     | enum   | false    | -       | The layout type.                      |
 
 
 ## usage
@@ -38,14 +38,58 @@ npm install -S @jswork/react-layout-trbla
   import ReactLayoutTrbla from '@jswork/react-layout-trbla';
   import './assets/style.scss';
 
+  const LAYOUT_MAPPING = {
+    la: 'left -> auto',
+    lar: 'left -> auto -> right',
+    ar: 'auto -> right',
+    lr: 'left -> right or justify',
+    ta: 'top -> auto',
+    tab: 'top -> auto -> bottom',
+    ab: 'auto -> bottom',
+    tb: 'top -> bottom or justify'
+  };
+
   class App extends React.Component {
+    state = {
+      layouts: ReactLayoutTrbla.layouts,
+      value: 'la'
+    };
+
+    get valueCount() {
+      return this.state.value.length;
+    }
+
     render() {
+      const { value } = this.state;
       return (
         <ReactDemokit
           className="p-3 app-container"
           url="https://github.com/afeiship/react-layout-trbla">
-          <ReactLayoutTrbla className="mb-5 has-text-white" />
-          <button className="button is-primary is-fullwidth">Start~</button>
+          <div className="text-center ">
+            <label htmlFor="sel" className="mr-10 text-white">
+              Select a value:
+            </label>
+            <select
+              id="sel"
+              className="p-3"
+              onChange={(e) => {
+                this.setState({ value: e.target.value });
+              }}>
+              {this.state.layouts.map((item) => (
+                <option key={item}>{item}</option>
+              ))}
+            </select>
+          </div>
+          <h1 className="text-center text-white" style={{ fontSize: 60 }}>
+            {LAYOUT_MAPPING[value]}
+          </h1>
+          <ReactLayoutTrbla value={value} className="mb-3">
+            <div>start</div>
+            <div>auto</div>
+            {(this.valueCount === 3 || value === 'lr' || value === 'tb') && (
+              <div>end</div>
+            )}
+          </ReactLayoutTrbla>
         </ReactDemokit>
       );
     }
