@@ -1,6 +1,6 @@
 {
   "name": "@jswork/react-layout-trbla",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simply trbla layout for react.",
   "main": "dist/index.js",
   "scripts": {
