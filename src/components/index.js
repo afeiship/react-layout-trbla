@@ -69,7 +69,7 @@ export default class ReactLayoutTrbla extends Component {
       'data-component': CLASS_NAME,
       'data-value': value,
       'data-align': align,
-      'className': classNames(CLASS_NAME, className),
+      'className': classNames('wsui-layout-trbla', CLASS_NAME, className),
       ...extraProps
     };
 

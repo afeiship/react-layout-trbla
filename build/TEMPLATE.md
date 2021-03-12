@@ -17,9 +17,8 @@ __GENERATE_DOCS__
 ## usage
 1. import css
   ```scss
-  @import "~@jswork/react-layout-trbla/dist/style.css";
-
   // or use sass
+  @import '~@jswork/wsui-layout-trbla/dist/index.scss';
   @import "~@jswork/react-layout-trbla/dist/style.scss";
 
   // customize your styles:
