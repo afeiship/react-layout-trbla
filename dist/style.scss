@@ -15,6 +15,13 @@ $react-layout-trbla-options: () !default;
 .react-layout-trbla {
   // your styles
   display: flex;
+  $layout-align-itmes: (center, flex-start, flex-end, space-between, space-around);
+
+  @each $value in $layout-align-itmes {
+    &[data-align="#{$value}"] {
+      align-items: $value;
+    }
+  }
 
   &[data-value="la"],
   &[data-value="lar"],
@@ -23,7 +30,6 @@ $react-layout-trbla-options: () !default;
     width: 100%;
     flex-direction: row;
   }
-
 
   &[data-value="ta"],
   &[data-value="tab"],

@@ -12,11 +12,12 @@ npm install -S @jswork/react-layout-trbla
 ```
 
 ## properties
-| Name      | Type   | Required | Default | Description                           |
-| --------- | ------ | -------- | ------- | ------------------------------------- |
-| className | string | false    | -       | The extended className for component. |
-| nodeName  | any    | false    | 'div'   | The container tag name.               |
-| value     | enum   | false    | -       | The layout type.                      |
+| Name      | Type   | Required | Default   | Description                           |
+| --------- | ------ | -------- | --------- | ------------------------------------- |
+| className | string | false    | -         | The extended className for component. |
+| nodeName  | any    | false    | 'div'     | The container tag name.               |
+| value     | enum   | false    | -         | The layout type.                      |
+| align     | enum   | false    | 'initial' | The flex layout align-items.          |
 
 
 ## usage
