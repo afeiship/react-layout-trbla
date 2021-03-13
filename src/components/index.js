@@ -13,7 +13,8 @@ const LAYOUT_TYPES = [
   'ta',
   'tab',
   'ab',
-  'tb'
+  'tb',
+  'center'
 ];
 
 const LAYOUT_ALIGN_TYPES = [
