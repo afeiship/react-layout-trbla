@@ -18,6 +18,7 @@ npm install -S @jswork/react-layout-trbla
 | nodeName  | any    | false    | 'div'     | The container tag name.               |
 | value     | enum   | false    | -         | The layout type.                      |
 | align     | enum   | false    | 'initial' | The flex layout align-items.          |
+| wrap      | bool   | false    | false     | The flex layout flex-wrap.            |
 
 
 ## usage
@@ -89,6 +90,31 @@ npm install -S @jswork/react-layout-trbla
             {(this.valueCount === 3 || value === 'lr' || value === 'tb') && (
               <div>end</div>
             )}
+          </ReactLayoutTrbla>
+
+          <h1>Wrap: true</h1>
+          <ReactLayoutTrbla value="lr" wrap className="is-list">
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+          </ReactLayoutTrbla>
+
+          <h1>Wrap: false</h1>
+          <ReactLayoutTrbla value="lr" className="is-list">
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
+            <div className="is-item"> item </div>
           </ReactLayoutTrbla>
         </ReactDemokit>
       );
