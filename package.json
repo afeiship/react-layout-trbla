@@ -93,7 +93,7 @@
   },
   "dependencies": {
     "@jswork/noop": "^1.0.0",
-    "@jswork/wsui-layout-trbla": "^1.0.3",
+    "@jswork/wsui-layout-trbla": "^1.0.4",
     "classnames": "^2.2.6"
   },
   "publishConfig": {

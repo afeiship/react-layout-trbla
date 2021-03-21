@@ -49,12 +49,17 @@ export default class ReactLayoutTrbla extends Component {
     /**
      * The flex layout align-items.
      */
-    align: PropTypes.oneOf(LAYOUT_ALIGN_TYPES)
+    align: PropTypes.oneOf(LAYOUT_ALIGN_TYPES),
+    /**
+     * The flex layout flex-wrap.
+     */
+    wrap: PropTypes.bool
   };
 
   static defaultProps = {
     nodeName: 'div',
-    align: 'initial'
+    align: 'initial',
+    wrap: false
   };
 
   render() {
@@ -63,6 +68,7 @@ export default class ReactLayoutTrbla extends Component {
       nodeName,
       value,
       align,
+      wrap,
       children,
       ...extraProps
     } = this.props;
@@ -70,6 +76,7 @@ export default class ReactLayoutTrbla extends Component {
       'data-component': CLASS_NAME,
       'data-value': value,
       'data-align': align,
+      'data-wrap': wrap,
       'className': classNames('wsui-layout-trbla', CLASS_NAME, className),
       ...extraProps
     };

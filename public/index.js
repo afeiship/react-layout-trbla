@@ -56,6 +56,31 @@ class App extends React.Component {
             <div>end</div>
           )}
         </ReactLayoutTrbla>
+
+        <h1>Wrap: true</h1>
+        <ReactLayoutTrbla value="lr" wrap className="is-list">
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+        </ReactLayoutTrbla>
+
+        <h1>Wrap: false</h1>
+        <ReactLayoutTrbla value="lr" className="is-list">
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+          <div className="is-item"> item </div>
+        </ReactLayoutTrbla>
       </ReactDemokit>
     );
   }
